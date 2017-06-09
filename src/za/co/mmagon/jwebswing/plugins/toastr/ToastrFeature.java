@@ -1,75 +1,92 @@
 package za.co.mmagon.jwebswing.plugins.toastr;
 
+import java.util.Objects;
 import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
 /**
- * Implements the Slim Scroll option via JavaScript instead of angular
+ * Creates toast messages
  *
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-@ComponentInformation(name = "Toastr JS", description = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
-        url = "https://github.com/GedMarc/JWebSwing-Toastr")
 public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 {
 
     private static final long serialVersionUID = 1L;
     /**
-     * The type of toaster
+     * The type of the toastr
      */
     private ToastrType type;
     /**
-     * THe message for the toaster
-     */
-    private String message;
-    /**
-     * The title for the toastr
+     * The title of the toast
      */
     private String title;
+    /**
+     * The message of the toast
+     */
+    private String message;
 
     /*
      * Constructs a new ToastrFeature
      */
-    public ToastrFeature()
+    ToastrFeature()
     {
         super("ToastrFeature");
+        //Nothing needed
     }
 
     /**
-     * Constructs with a given message and title
+     * Constructs with a given message
      *
      * @param message
-     * @param title
      */
-    public ToastrFeature(String message, String title)
+    public ToastrFeature(String message)
     {
         this();
         this.message = message;
-        this.title = title;
     }
 
     /**
-     * Constructs with a given message and title and type
+     * Constructs a new feature with title and message
+     *
+     * @param title
+     * @param message
+     */
+    public ToastrFeature(String title, String message)
+    {
+        this();
+        this.title = title;
+        this.message = message;
+    }
+
+    /**
+     * Constructs a complete feature
      *
      * @param type
-     * @param message
      * @param title
+     * @param message
      */
-    public ToastrFeature(ToastrType type, String message, String title)
+    public ToastrFeature(ToastrType type, String title, String message)
     {
-        this(message, title);
+        this();
         this.type = type;
+        this.title = title;
+        this.message = message;
     }
 
     @Override
     protected void assignFunctionsToComponent()
     {
         addQuery("toastr.options = " + getOptions() + ";");
-        addQuery("toastr['" + getType() + "']('" + getMessage() + "'" + (getTitle() == null ? "" : "," + getTitle()) + ");");
-
+        addQuery("toastr['" + getType() + "']('" + getMessage() + "'" + (getTitle() == null
+                ? "" : ",'" + getTitle() + "'") + ");");
     }
 
+    /**
+     * Returns the options
+     *
+     * @return
+     */
     @Override
     public ToastrOptions getOptions()
     {
@@ -81,52 +98,31 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
     }
 
     /**
-     * Returns the type of toastr, default info
+     * Returns the type for the toastr
      *
      * @return
      */
     public ToastrType getType()
     {
-        if (this.type == null)
+        if (type == null)
         {
-            this.type = ToastrType.Info;
+            return ToastrType.Info;
         }
         return type;
     }
 
     /**
-     * Sets the type or info if null
+     * Sets the type for the toastr
      *
      * @param type
      */
     public void setType(ToastrType type)
     {
         this.type = type;
-
     }
 
     /**
-     * Gets the message
-     *
-     * @return
-     */
-    public String getMessage()
-    {
-        return message;
-    }
-
-    /**
-     * Sets the message
-     *
-     * @param message
-     */
-    public void setMessage(String message)
-    {
-        this.message = message;
-    }
-
-    /**
-     * Gets the title
+     * Returns the title of the toastr
      *
      * @return
      */
@@ -136,13 +132,66 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
     }
 
     /**
-     * Sets the title
+     * Sets the title of the toastr
      *
      * @param title
      */
     public void setTitle(String title)
     {
         this.title = title;
+    }
+
+    /**
+     * Returns the message of the toaster
+     *
+     * @return
+     */
+    public String getMessage()
+    {
+        if (message == null)
+        {
+            message = "";
+        }
+        return message;
+    }
+
+    /**
+     * Sets the message of the toaster
+     *
+     * @param message
+     */
+    public void setMessage(String message)
+    {
+        this.message = message;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        int hash = 3;
+        hash = 67 * hash + Objects.hashCode(this.type);
+        hash = 67 * hash + Objects.hashCode(this.title);
+        hash = 67 * hash + Objects.hashCode(this.message);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this == obj)
+        {
+            return true;
+        }
+        if (obj == null)
+        {
+            return false;
+        }
+        if (getClass() != obj.getClass())
+        {
+            return false;
+        }
+        final ToastrFeature other = (ToastrFeature) obj;
+        return true;
     }
 
 }

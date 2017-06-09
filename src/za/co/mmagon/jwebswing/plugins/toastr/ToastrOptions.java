@@ -1,5 +1,7 @@
 package za.co.mmagon.jwebswing.plugins.toastr;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
 
@@ -40,18 +42,22 @@ public class ToastrOptions extends JavaScriptPart
     /**
      * The duration for the show
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Integer showDuration = 300;
     /**
      * The duration for the hide
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Integer hideDuration = 1000;
     /**
      * The timeout duration
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Integer timeOut = 5000;
     /**
      * The extended timeout duration
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Integer extendedTimeOut = 1000;
     /**
      * The easing effect to show
