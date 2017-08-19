@@ -26,6 +26,7 @@
     <orderEntry type="library" name="Maven: net.sf.uadetector:uadetector-json:0.1.22" level="project" />
     <orderEntry type="library" name="Maven: net.sf.uadetector:uadetector-resources:2014.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="module" module-name="guice-injection" />
     <orderEntry type="library" name="Maven: io.github.lukehutch:fast-classpath-scanner:2.4.5" level="project" />
     <orderEntry type="library" name="Maven: com.jcabi:jcabi-aspects:1.0-SNAPSHOT" level="project" />
@@ -44,7 +45,6 @@
     <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-multibindings:4.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-persist:4.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-jndi:4.1.0" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.22.0-CR1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.8" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.8" level="project" />
@@ -52,6 +52,7 @@
     <orderEntry type="library" name="Maven: javax.ws.rs:jsr311-api:1.1.1" level="project" />
     <orderEntry type="module" module-name="log-master" />
     <orderEntry type="module" module-name="jwebswing-interception" />
+    <orderEntry type="library" name="Maven: javax:javaee-web-api:7.0" level="project" />
     <orderEntry type="module" module-name="jwebswing" scope="TEST" production-on-test="" />
     <orderEntry type="module" module-name="jwebswing-easing-effects" />
   </component>
