@@ -16,12 +16,7 @@
         <url>https://github.com/GedMarc/JWebSwing-Toastr/issues</url>
     </issueManagement>
 
-    <repositories>
-        <repository>
-            <id>oss.sonatype.org</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
-    </repositories>
+    <repositories>        <repository>            <id>oss.sonatype.org</id>            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>        </repository>        <repository>            <id>armin-release</id>            <name>ArminSoftwareArtifactory-releases</name>            <url>https://www.armin.software/artifactory/libs-release</url>        </repository>        <repository>            <id>armin-snapshot</id>            <name>ArminSoftwareArtifactory-releases</name>            <url>https://www.armin.software/artifactory/libs-snapshot</url>        </repository>    </repositories>
 
     <profiles>
         <profile>
@@ -251,7 +246,7 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-<distributionManagement>        <snapshotRepository>            <id>snapshots</id>            <name>ArminSoftwareArtifactory-snapshots</name>            <url>https://www.armin.software/artifactory/libs-snapshot-local</url>        </snapshotRepository>        <repository>            <id>central</id>            <name>ArminSoftwareArtifactory-releases</name>            <url>https://www.armin.software/artifactory/libs-release-local</url>        </repository>    </distributionManagement><organization>
+<distributionManagement>        <snapshotRepository>            <id>snapshot</id>            <name>ArminSoftwareArtifactory-snapshots</name>            <url>https://www.armin.software/artifactory/libs-snapshot-local</url>        </snapshotRepository>        <repository>            <id>central</id>            <name>ArminSoftwareArtifactory-releases</name>            <url>https://www.armin.software/artifactory/libs-release-local</url>        </repository>    </distributionManagement><organization>
         <name>Armin Software</name>
         <url>http://www.armin.software</url>
     </organization>
