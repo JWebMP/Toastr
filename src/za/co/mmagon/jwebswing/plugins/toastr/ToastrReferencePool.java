@@ -21,23 +21,24 @@ enum ToastrReferencePool implements ReferencePool
 	private String data;
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;
-
+	
 	/**
 	 * A new AngularSlimScrollReferencePool
 	 */
-	private ToastrReferencePool()
+	ToastrReferencePool()
 	{
-
+	
 	}
+	
 	/**
 	 * A new AngularSlimScrollReferencePool with data
 	 */
-	private ToastrReferencePool(String data)
+	ToastrReferencePool(String data)
 	{
-
+	
 	}
-
-	private ToastrReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
+	
+	ToastrReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{
 		this.javaScriptReference = javaScriptReference;
 		if (this.javaScriptReference != null)
@@ -50,31 +51,31 @@ enum ToastrReferencePool implements ReferencePool
 			this.cssReference.setPriority(RequirementsPriority.DontCare);
 		}
 	}
-
+	
 	@Override
 	public JavascriptReference getJavaScriptReference()
 	{
 		return javaScriptReference;
 	}
-
+	
 	@Override
 	public void setJavaScriptReference(JavascriptReference javaScriptReference)
 	{
 		this.javaScriptReference = javaScriptReference;
 	}
-
+	
 	@Override
 	public CSSReference getCssReference()
 	{
 		return cssReference;
 	}
-
+	
 	@Override
 	public void setCssReference(CSSReference cssReference)
 	{
 		this.cssReference = cssReference;
 	}
-
+	
 	/**
 	 * Returns the name or the data contained within
 	 *

@@ -27,7 +27,7 @@
     <orderEntry type="library" name="Maven: net.sf.uadetector:uadetector-resources:2014.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: za.co.mmagon:guice-injection:0.0.0_0" level="project" />
+    <orderEntry type="module" module-name="guice-injection" />
     <orderEntry type="library" name="Maven: io.github.lukehutch:fast-classpath-scanner:2.4.7" level="project" />
     <orderEntry type="library" name="Maven: com.jcabi:jcabi-aspects:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.jcabi:jcabi-log:0.17" level="project" />
@@ -54,6 +54,11 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.8.9" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.9" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-guice:2.8.9" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.cache:cache-api:1.0.0" level="project" />
     <orderEntry type="module" module-name="log-master" />
     <orderEntry type="module" module-name="jwebswing-interception" />
     <orderEntry type="library" name="Maven: javax:javaee-web-api:7.0" level="project" />
