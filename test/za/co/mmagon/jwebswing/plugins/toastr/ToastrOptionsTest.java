@@ -1,7 +1,7 @@
 package za.co.mmagon.jwebswing.plugins.toastr;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import za.co.mmagon.BaseTestClass;
 import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
 
@@ -31,7 +31,7 @@ public class ToastrOptionsTest extends BaseTestClass
 		to.getOptions().setShowMethod(JQEasingEffects.fadeIn);
 		System.out.println(to.renderJavascript());
 		
-		Assert.assertEquals("toastr.options = {\n"
+		Assertions.assertEquals("toastr.options = {\n"
 				                    + "  \"closeButton\" : false,\n"
 				                    + "  \"debug\" : true,\n"
 				                    + "  \"newestOnTop\" : true,\n"
@@ -59,7 +59,7 @@ public class ToastrOptionsTest extends BaseTestClass
 		to.getOptions().setShowMethod(JQEasingEffects.easeOutSine);
 		System.out.println(to.renderJavascript());
 		
-		Assert.assertEquals("toastr.options = {\n"
+		Assertions.assertEquals("toastr.options = {\n"
 				                    + "  \"closeButton\" : false,\n"
 				                    + "  \"debug\" : true,\n"
 				                    + "  \"newestOnTop\" : true,\n"
@@ -84,7 +84,7 @@ public class ToastrOptionsTest extends BaseTestClass
 		ToastrFeature to = new ToastrFeature();
 		System.out.println(to.renderJavascript());
 		
-		Assert.assertEquals("toastr.options = {\n"
+		Assertions.assertEquals("toastr.options = {\n"
 				                    + "  \"closeButton\" : false,\n"
 				                    + "  \"debug\" : false,\n"
 				                    + "  \"newestOnTop\" : true,\n"
