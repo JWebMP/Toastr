@@ -28,23 +28,16 @@ public enum ToastrType
 	 * Any sub data
 	 */
 	private String data;
-	
+
 	/**
 	 * A new ToastrType
 	 */
-	private ToastrType()
+	ToastrType()
 	{
-	
+
 	}
-	
-	/**
-	 * A new ToastrType with data
-	 */
-	private ToastrType(String data)
-	{
-	
-	}
-	
+
+
 	/**
 	 * Returns the name or the data contained within
 	 *

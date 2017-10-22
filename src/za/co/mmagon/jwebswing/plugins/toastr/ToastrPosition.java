@@ -24,15 +24,7 @@ public enum ToastrPosition
 	/**
 	 * A new ToastrPosition
 	 */
-	private ToastrPosition()
-	{
-
-	}
-
-	/**
-	 * A new ToastrPosition with data
-	 */
-	private ToastrPosition(String data)
+	ToastrPosition()
 	{
 
 	}

@@ -24,9 +24,9 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/Toastr.jar/download"
 ) class ToastrPageConfigurator extends PageConfigurator
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	/*
 	 * Constructs a new ToastrPageConfigurator
 	 */
@@ -34,18 +34,16 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 	{
 		//Nothing needed
 	}
-	
+
 	@Override
 	public Page configure(Page page)
 	{
 		if (!page.isConfigured())
 		{
 			JQueryPageConfigurator.setRequired(page.getBody(), true);
-			
+
 			page.getBody().addJavaScriptReference(ToastrReferencePool.Toastr.getJavaScriptReference());
 			page.getBody().addCssReference(ToastrReferencePool.Toastr.getCssReference());
-			
-			//page.getAngular().getControllerInsertions().add("toastr");
 		}
 		return page;
 	}

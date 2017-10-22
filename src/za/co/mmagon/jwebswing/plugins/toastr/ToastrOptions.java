@@ -13,7 +13,7 @@ import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
  */
 public class ToastrOptions extends JavaScriptPart
 {
-	
+
 	private static final long serialVersionUID = 1L;
 	/**
 	 * Show close button or not
@@ -79,14 +79,15 @@ public class ToastrOptions extends JavaScriptPart
 	 * Should the toast escape HTML
 	 */
 	private Boolean escapeHtml = false;
-	
+
 	/**
 	 * Constructs a new toastr options object
 	 */
 	public ToastrOptions()
 	{
+		//Nothing needed
 	}
-	
+
 	/**
 	 * If the close button is being used
 	 *
@@ -96,13 +97,13 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return closeButton;
 	}
-	
+
 	public ToastrOptions setCloseButton(Boolean closeButton)
 	{
 		this.closeButton = closeButton;
 		return this;
 	}
-	
+
 	/**
 	 * Returns if is in debug mode
 	 *
@@ -112,7 +113,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return debug;
 	}
-	
+
 	/**
 	 * Sets debug mode
 	 *
@@ -125,7 +126,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.debug = debug;
 		return this;
 	}
-	
+
 	/**
 	 * If newest is on top
 	 *
@@ -135,7 +136,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return newestOnTop;
 	}
-	
+
 	/**
 	 * Sets if newest is on top
 	 *
@@ -148,7 +149,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.newestOnTop = newestOnTop;
 		return this;
 	}
-	
+
 	/**
 	 * Sets the progress bar
 	 *
@@ -158,7 +159,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return progressBar;
 	}
-	
+
 	/**
 	 * Sets the progress bar
 	 *
@@ -171,7 +172,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.progressBar = progressBar;
 		return this;
 	}
-	
+
 	/**
 	 * Gets the position class
 	 *
@@ -181,7 +182,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return positionClass;
 	}
-	
+
 	/**
 	 * Sets the position class
 	 *
@@ -194,7 +195,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.positionClass = positionClass;
 		return this;
 	}
-	
+
 	/**
 	 * Prevents duplicates
 	 *
@@ -204,7 +205,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return preventDuplicates;
 	}
-	
+
 	/**
 	 * Sets prevents duplicates
 	 *
@@ -217,7 +218,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.preventDuplicates = preventDuplicates;
 		return this;
 	}
-	
+
 	/**
 	 * Sets show duration
 	 *
@@ -227,7 +228,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return showDuration;
 	}
-	
+
 	/**
 	 * Sets show duration
 	 *
@@ -240,7 +241,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.showDuration = showDuration;
 		return this;
 	}
-	
+
 	/**
 	 * Sets hide duration
 	 *
@@ -250,7 +251,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return hideDuration;
 	}
-	
+
 	/**
 	 * Sets hide duration
 	 *
@@ -263,7 +264,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.hideDuration = hideDuration;
 		return this;
 	}
-	
+
 	/**
 	 * Gets the timeout
 	 *
@@ -273,7 +274,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return timeOut;
 	}
-	
+
 	/**
 	 * Sets the timeout
 	 *
@@ -286,7 +287,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.timeOut = timeOut;
 		return this;
 	}
-	
+
 	/**
 	 * Gets the extended timeout
 	 *
@@ -296,7 +297,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return extendedTimeOut;
 	}
-	
+
 	/**
 	 * Sets the extended time out
 	 *
@@ -309,7 +310,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.extendedTimeOut = extendedTimeOut;
 		return this;
 	}
-	
+
 	/**
 	 * Sets the easing effect
 	 *
@@ -319,7 +320,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return showEasing;
 	}
-	
+
 	/**
 	 * Sets the easing effect
 	 *
@@ -332,7 +333,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.showEasing = showEasing;
 		return this;
 	}
-	
+
 	/**
 	 * Hides the easing effect
 	 *
@@ -342,7 +343,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return hideEasing;
 	}
-	
+
 	/**
 	 * Sets the hiding effect
 	 *
@@ -355,7 +356,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.hideEasing = hideEasing;
 		return this;
 	}
-	
+
 	/**
 	 * Sets the show effect
 	 *
@@ -365,7 +366,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return showMethod;
 	}
-	
+
 	/**
 	 * Sets the show effect
 	 *
@@ -378,7 +379,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.showMethod = showMethod;
 		return this;
 	}
-	
+
 	/**
 	 * Sets the hide effect
 	 *
@@ -388,7 +389,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return hideMethod;
 	}
-	
+
 	/**
 	 * Sets the hide effect
 	 *
@@ -401,7 +402,7 @@ public class ToastrOptions extends JavaScriptPart
 		this.hideMethod = hideMethod;
 		return this;
 	}
-	
+
 	/**
 	 * If the message and title should escape HTML
 	 *
@@ -411,7 +412,7 @@ public class ToastrOptions extends JavaScriptPart
 	{
 		return escapeHtml;
 	}
-	
+
 	/**
 	 * If the message and title should escape HTML
 	 *
@@ -424,5 +425,5 @@ public class ToastrOptions extends JavaScriptPart
 		this.escapeHtml = escapeHtml;
 		return this;
 	}
-	
+
 }
