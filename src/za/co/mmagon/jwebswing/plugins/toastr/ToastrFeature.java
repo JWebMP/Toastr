@@ -4,6 +4,8 @@ import za.co.mmagon.jwebswing.Feature;
 
 import java.util.Objects;
 
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_SINGLE_QUOTES;
+
 /**
  * Creates toast messages
  *
@@ -79,8 +81,8 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 	protected void assignFunctionsToComponent()
 	{
 		addQuery("toastr.options = " + getOptions() + ";");
-		addQuery("toastr['" + getType() + "']('" + getMessage() + "'" + (getTitle() == null
-				? "" : ",'" + getTitle() + "'") + ");");
+		addQuery("toastr['" + getType() + "']('" + getMessage() + STRING_SINGLE_QUOTES + (getTitle() == null
+				                                                                                  ? "" : ",'" + getTitle() + STRING_SINGLE_QUOTES) + ");");
 	}
 	
 	/**
