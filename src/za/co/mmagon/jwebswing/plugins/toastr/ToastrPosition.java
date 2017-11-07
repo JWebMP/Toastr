@@ -1,5 +1,7 @@
 package za.co.mmagon.jwebswing.plugins.toastr;
 
+import za.co.mmagon.jwebswing.utilities.StaticStrings;
+
 /**
  * The available positions for a toast
  *
@@ -43,7 +45,7 @@ public enum ToastrPosition
 		}
 		else
 		{
-			return name().toLowerCase().replace('_', '-');
+			return name().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, '-');
 		}
 	}
 }
