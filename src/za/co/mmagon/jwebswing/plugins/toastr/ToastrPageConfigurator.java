@@ -40,7 +40,7 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 	{
 		if (!page.isConfigured())
 		{
-			JQueryPageConfigurator.setRequired(page.getBody(), true);
+			JQueryPageConfigurator.setRequired(true);
 
 			page.getBody().addJavaScriptReference(ToastrReferencePool.Toastr.getJavaScriptReference());
 			page.getBody().addCssReference(ToastrReferencePool.Toastr.getCssReference());

@@ -4,6 +4,7 @@ import za.co.mmagon.jwebswing.Feature;
 
 import java.util.Objects;
 
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_SINGLE_QUOTES;
 
 /**
@@ -14,7 +15,7 @@ import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_SINGLE_QUOTE
  */
 public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 {
-	
+
 	private static final long serialVersionUID = 1L;
 	/**
 	 * The type of the toastr
@@ -28,7 +29,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 	 * The message of the toast
 	 */
 	private String message;
-	
+
 	/*
 	 * Constructs a new ToastrFeature
 	 */
@@ -37,7 +38,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		super("ToastrFeature");
 		//Nothing needed
 	}
-	
+
 	/**
 	 * Constructs with a given message
 	 *
@@ -48,7 +49,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		this();
 		this.message = message;
 	}
-	
+
 	/**
 	 * Constructs a new feature with title and message
 	 *
@@ -61,7 +62,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		this.title = title;
 		this.message = message;
 	}
-	
+
 	/**
 	 * Constructs a complete feature
 	 *
@@ -76,15 +77,15 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		this.title = title;
 		this.message = message;
 	}
-	
+
 	@Override
 	protected void assignFunctionsToComponent()
 	{
 		addQuery("toastr.options = " + getOptions() + ";");
 		addQuery("toastr['" + getType() + "']('" + getMessage() + STRING_SINGLE_QUOTES + (getTitle() == null
-				                                                                                  ? "" : ",'" + getTitle() + STRING_SINGLE_QUOTES) + ");");
+				                                                                                  ? "" : ",'" + getTitle() + STRING_SINGLE_QUOTES) + STRING_CLOSING_BRACKET_SEMICOLON);
 	}
-	
+
 	/**
 	 * Returns the options
 	 *
@@ -99,7 +100,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		}
 		return super.getOptions();
 	}
-	
+
 	/**
 	 * Returns the type for the toastr
 	 *
@@ -113,7 +114,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		}
 		return type;
 	}
-	
+
 	/**
 	 * Sets the type for the toastr
 	 *
@@ -123,7 +124,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 	{
 		this.type = type;
 	}
-	
+
 	/**
 	 * Returns the title of the toastr
 	 *
@@ -133,7 +134,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 	{
 		return title;
 	}
-	
+
 	/**
 	 * Sets the title of the toastr
 	 *
@@ -143,7 +144,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 	{
 		this.title = title;
 	}
-	
+
 	/**
 	 * Returns the message of the toaster
 	 *
@@ -157,7 +158,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		}
 		return message;
 	}
-	
+
 	/**
 	 * Sets the message of the toaster
 	 *
@@ -167,7 +168,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 	{
 		this.message = message;
 	}
-	
+
 	@Override
 	public int hashCode()
 	{
@@ -177,11 +178,11 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		hash = 67 * hash + Objects.hashCode(this.message);
 		return hash;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj)
 	{
 		return false;
 	}
-	
+
 }
