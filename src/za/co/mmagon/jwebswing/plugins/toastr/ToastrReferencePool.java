@@ -13,8 +13,8 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 enum ToastrReferencePool implements ReferencePool
 {
-	Toastr(new JavascriptReference("Toastr", 2.3, "bower_components/toastr/toastr.js"),
-	       new CSSReference("Toastr", 2.3, "bower_components/toastr/toastr.css"));
+	Toastr(new JavascriptReference("Toastr", 2.3, "bower_components/toastr/toastr.min.js"),
+	       new CSSReference("Toastr", 2.3, "bower_components/toastr/toastr.min.css"));
 	/**
 	 * Any sub data
 	 */
