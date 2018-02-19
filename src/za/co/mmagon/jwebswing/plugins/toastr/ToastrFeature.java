@@ -2,7 +2,7 @@ package za.co.mmagon.jwebswing.plugins.toastr;
 
 import za.co.mmagon.jwebswing.Feature;
 
-import java.util.Objects;
+import javax.validation.constraints.NotNull;
 
 import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_SINGLE_QUOTES;
@@ -13,7 +13,7 @@ import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_SINGLE_QUOTE
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
+public class ToastrFeature<J extends ToastrFeature<J>> extends Feature<ToastrOptions, J>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -78,34 +78,62 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		this.message = message;
 	}
 
+	/**
+	 * Sets the title of the toastr
+	 *
+	 * @param title
+	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setTitle(String title)
+	{
+		this.title = title;
+		return (J) this;
+	}
+
 	@Override
 	protected void assignFunctionsToComponent()
 	{
 		addQuery("toastr.options = " + getOptions() + ";");
 		addQuery("toastr['" + getType() + "']('" + getMessage() + STRING_SINGLE_QUOTES + (getTitle() == null
-				                                                                                  ? "" : ",'" + getTitle() + STRING_SINGLE_QUOTES) + STRING_CLOSING_BRACKET_SEMICOLON);
+		                                                                                  ? ""
+		                                                                                  : ",'" + getTitle() + STRING_SINGLE_QUOTES) +
+				         STRING_CLOSING_BRACKET_SEMICOLON);
 	}
 
 	/**
-	 * Returns the options
+	 * Sets the message of the toaster
 	 *
-	 * @return
+	 * @param message
 	 */
-	@Override
-	public ToastrOptions getOptions()
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setMessage(String message)
 	{
-		if (super.getOptions() == null)
-		{
-			setOptions(new ToastrOptions());
-		}
-		return super.getOptions();
+		this.message = message;
+		return (J) this;
+	}	/**
+ * Returns the options
+ *
+ * @return
+ */
+@Override
+@NotNull
+public ToastrOptions getOptions()
+{
+	if (super.getOptions() == null)
+	{
+		setOptions(new ToastrOptions());
 	}
+	return super.getOptions();
+}
 
 	/**
 	 * Returns the type for the toastr
 	 *
 	 * @return
 	 */
+	@NotNull
 	public ToastrType getType()
 	{
 		if (type == null)
@@ -120,9 +148,12 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 	 *
 	 * @param type
 	 */
-	public void setType(ToastrType type)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setType(ToastrType type)
 	{
 		this.type = type;
+		return (J) this;
 	}
 
 	/**
@@ -135,15 +166,7 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		return title;
 	}
 
-	/**
-	 * Sets the title of the toastr
-	 *
-	 * @param title
-	 */
-	public void setTitle(String title)
-	{
-		this.title = title;
-	}
+
 
 	/**
 	 * Returns the message of the toaster
@@ -159,24 +182,11 @@ public class ToastrFeature extends Feature<ToastrOptions, ToastrFeature>
 		return message;
 	}
 
-	/**
-	 * Sets the message of the toaster
-	 *
-	 * @param message
-	 */
-	public void setMessage(String message)
-	{
-		this.message = message;
-	}
 
 	@Override
 	public int hashCode()
 	{
-		int hash = 3;
-		hash = 67 * hash + Objects.hashCode(this.type);
-		hash = 67 * hash + Objects.hashCode(this.title);
-		hash = 67 * hash + Objects.hashCode(this.message);
-		return hash;
+		return super.hashCode();
 	}
 
 	@Override

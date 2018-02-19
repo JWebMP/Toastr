@@ -5,13 +5,15 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * All the options available for Toastr
  *
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-public class ToastrOptions extends JavaScriptPart
+public class ToastrOptions<J extends ToastrOptions<J>> extends JavaScriptPart<J>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -98,10 +100,12 @@ public class ToastrOptions extends JavaScriptPart
 		return closeButton;
 	}
 
-	public ToastrOptions setCloseButton(Boolean closeButton)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setCloseButton(Boolean closeButton)
 	{
 		this.closeButton = closeButton;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -121,10 +125,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setDebug(Boolean debug)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setDebug(Boolean debug)
 	{
 		this.debug = debug;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -144,10 +150,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setNewestOnTop(Boolean newestOnTop)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setNewestOnTop(Boolean newestOnTop)
 	{
 		this.newestOnTop = newestOnTop;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -167,10 +175,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setProgressBar(Boolean progressBar)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setProgressBar(Boolean progressBar)
 	{
 		this.progressBar = progressBar;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -190,10 +200,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setPositionClass(ToastrPosition positionClass)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setPositionClass(ToastrPosition positionClass)
 	{
 		this.positionClass = positionClass;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -213,10 +225,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setPreventDuplicates(Boolean preventDuplicates)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setPreventDuplicates(Boolean preventDuplicates)
 	{
 		this.preventDuplicates = preventDuplicates;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -236,10 +250,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setShowDuration(Integer showDuration)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setShowDuration(Integer showDuration)
 	{
 		this.showDuration = showDuration;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -259,10 +275,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setHideDuration(Integer hideDuration)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setHideDuration(Integer hideDuration)
 	{
 		this.hideDuration = hideDuration;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -282,10 +300,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setTimeOut(Integer timeOut)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setTimeOut(Integer timeOut)
 	{
 		this.timeOut = timeOut;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -305,10 +325,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setExtendedTimeOut(Integer extendedTimeOut)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setExtendedTimeOut(Integer extendedTimeOut)
 	{
 		this.extendedTimeOut = extendedTimeOut;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -328,10 +350,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setShowEasing(JQEasingEffects showEasing)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setShowEasing(JQEasingEffects showEasing)
 	{
 		this.showEasing = showEasing;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -351,10 +375,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setHideEasing(JQEasingEffects hideEasing)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setHideEasing(JQEasingEffects hideEasing)
 	{
 		this.hideEasing = hideEasing;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -374,10 +400,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setShowMethod(JQEasingEffects showMethod)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setShowMethod(JQEasingEffects showMethod)
 	{
 		this.showMethod = showMethod;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -397,10 +425,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setHideMethod(JQEasingEffects hideMethod)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setHideMethod(JQEasingEffects hideMethod)
 	{
 		this.hideMethod = hideMethod;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -420,10 +450,12 @@ public class ToastrOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public ToastrOptions setEscapeHtml(Boolean escapeHtml)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setEscapeHtml(Boolean escapeHtml)
 	{
 		this.escapeHtml = escapeHtml;
-		return this;
+		return (J) this;
 	}
 
 }
