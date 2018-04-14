@@ -1,27 +1,44 @@
-package za.co.mmagon.jwebswing.plugins.toastr;
+/*
+ * Copyright (C) 2017 Marc Magon
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
+package com.jwebmp.plugins.toastr;
+
+import com.jwebmp.BaseTestClass;
+import com.jwebmp.plugins.easingeffects.JQEasingEffects;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import za.co.mmagon.jwebswing.BaseTestClass;
-import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
 
 /**
  * @author Marc Magon
  */
 public class ToastrOptionsTest extends BaseTestClass
 {
-	
+
 	public ToastrOptionsTest()
 	{
 	}
-	
+
 	@Test
 	public void testSomeMethod()
 	{
 		ToastrOptions to = new ToastrOptions();
 		System.out.println(to.toString());
 	}
-	
+
 	@Test
 	public void testSomeMethod2()
 	{
@@ -30,7 +47,7 @@ public class ToastrOptionsTest extends BaseTestClass
 		to.getOptions().setDebug(true);
 		to.getOptions().setShowMethod(JQEasingEffects.fadeIn);
 		System.out.println(to.renderJavascript());
-		
+
 		Assertions.assertEquals("toastr.options = {\n"
 				                    + "  \"closeButton\" : false,\n"
 				                    + "  \"debug\" : true,\n"
@@ -49,7 +66,7 @@ public class ToastrOptionsTest extends BaseTestClass
 				                    + "  \"escapeHtml\" : false\n"
 				                    + "};toastr['info']('Message');", to.renderJavascript().toString());
 	}
-	
+
 	@Test
 	public void testTitleMessage()
 	{
@@ -58,7 +75,7 @@ public class ToastrOptionsTest extends BaseTestClass
 		to.getOptions().setDebug(true);
 		to.getOptions().setShowMethod(JQEasingEffects.easeOutSine);
 		System.out.println(to.renderJavascript());
-		
+
 		Assertions.assertEquals("toastr.options = {\n"
 				                    + "  \"closeButton\" : false,\n"
 				                    + "  \"debug\" : true,\n"
@@ -77,13 +94,13 @@ public class ToastrOptionsTest extends BaseTestClass
 				                    + "  \"escapeHtml\" : false\n"
 				                    + "};toastr['error']('Message','Title Test');", to.renderJavascript().toString());
 	}
-	
+
 	@Test
 	public void testSomeMethod3()
 	{
 		ToastrFeature to = new ToastrFeature();
 		System.out.println(to.renderJavascript());
-		
+
 		Assertions.assertEquals("toastr.options = {\n"
 				                    + "  \"closeButton\" : false,\n"
 				                    + "  \"debug\" : false,\n"

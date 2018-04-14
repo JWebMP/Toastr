@@ -1,9 +1,9 @@
-package za.co.mmagon.jwebswing.plugins.toastr;
+package com.jwebmp.plugins.toastr;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.plugins.easingeffects.JQEasingEffects;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.plugins.easingeffects.JQEasingEffects;
 
 import javax.validation.constraints.NotNull;
 
