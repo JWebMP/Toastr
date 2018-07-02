@@ -21,8 +21,7 @@ import com.jwebmp.Feature;
 
 import javax.validation.constraints.NotNull;
 
-import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
-import static com.jwebmp.utilities.StaticStrings.STRING_SINGLE_QUOTES;
+import static com.jwebmp.utilities.StaticStrings.*;
 
 /**
  * Creates toast messages
@@ -30,7 +29,8 @@ import static com.jwebmp.utilities.StaticStrings.STRING_SINGLE_QUOTES;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-public class ToastrFeature<J extends ToastrFeature<J>> extends Feature<ToastrOptions, J>
+public class ToastrFeature<J extends ToastrFeature<J>>
+		extends Feature<ToastrOptions, J>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -108,28 +108,34 @@ public class ToastrFeature<J extends ToastrFeature<J>> extends Feature<ToastrOpt
 	}
 
 	/**
- * Returns the options
- *
- * @return
- */
-@Override
-@NotNull
-public ToastrOptions getOptions()
-{
-	if (super.getOptions() == null)
+	 * Returns the options
+	 *
+	 * @return
+	 */
+	@Override
+	@NotNull
+	public ToastrOptions getOptions()
 	{
-		setOptions(new ToastrOptions());
+		if (super.getOptions() == null)
+		{
+			setOptions(new ToastrOptions());
+		}
+		return super.getOptions();
 	}
-	return super.getOptions();
-}
 
 	@Override
 	protected void assignFunctionsToComponent()
 	{
 		addQuery("toastr.options = " + getOptions() + ";");
-		addQuery("toastr['" + getType() + "']('" + getMessage() + STRING_SINGLE_QUOTES + (getTitle() == null
-		                                                                                  ? ""
-		                                                                                  : ",'" + getTitle() + STRING_SINGLE_QUOTES) + STRING_CLOSING_BRACKET_SEMICOLON);
+		addQuery("toastr['" +
+		         getType() +
+		         "']('" +
+		         getMessage().replaceAll("'", "\\'") +
+		         STRING_SINGLE_QUOTES +
+		         (getTitle() == null
+		          ? ""
+		          : ",'" + getTitle().replaceAll("'", "\\'") + STRING_SINGLE_QUOTES) +
+		         STRING_CLOSING_BRACKET_SEMICOLON);
 	}
 
 	/**
