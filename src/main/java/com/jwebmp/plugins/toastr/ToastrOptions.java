@@ -13,7 +13,8 @@ import javax.validation.constraints.NotNull;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-public class ToastrOptions<J extends ToastrOptions<J>> extends JavaScriptPart<J>
+public class ToastrOptions<J extends ToastrOptions<J>>
+		extends JavaScriptPart<J>
 {
 
 	private static final long serialVersionUID = 1L;

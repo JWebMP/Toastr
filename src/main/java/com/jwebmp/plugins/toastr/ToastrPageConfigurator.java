@@ -39,7 +39,8 @@ import com.jwebmp.plugins.jquery.JQueryPageConfigurator;
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "http://codeseven.github.io/toastr/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/Toastr.jar/download"
-) class ToastrPageConfigurator extends PageConfigurator
+) class ToastrPageConfigurator
+		extends PageConfigurator
 {
 
 	private static final long serialVersionUID = 1L;
@@ -59,8 +60,10 @@ import com.jwebmp.plugins.jquery.JQueryPageConfigurator;
 		{
 			JQueryPageConfigurator.setRequired(true);
 
-			page.getBody().addJavaScriptReference(ToastrReferencePool.Toastr.getJavaScriptReference());
-			page.getBody().addCssReference(ToastrReferencePool.Toastr.getCssReference());
+			page.getBody()
+			    .addJavaScriptReference(ToastrReferencePool.Toastr.getJavaScriptReference());
+			page.getBody()
+			    .addCssReference(ToastrReferencePool.Toastr.getCssReference());
 		}
 		return page;
 	}

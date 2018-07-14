@@ -28,7 +28,8 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-enum ToastrReferencePool implements ReferencePool
+enum ToastrReferencePool
+		implements ReferencePool
 {
 	Toastr(new JavascriptReference("Toastr", 2.3, "bower_components/toastr/toastr.min.js"),
 	       new CSSReference("Toastr", 2.3, "bower_components/toastr/toastr.min.css"));

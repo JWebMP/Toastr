@@ -50,7 +50,23 @@ public class ToastrOptionsTest
 		System.out.println(to.renderJavascript());
 
 		Assertions.assertEquals(
-				"toastr.options = {\n" + "  \"closeButton\" : false,\n" + "  \"debug\" : true,\n" + "  \"newestOnTop\" : true,\n" + "  \"progressBar\" : false,\n" + "  \"positionClass\" : \"toast-top-right\",\n" + "  \"preventDuplicates\" : false,\n" + "  \"showDuration\" : \"300\",\n" + "  \"hideDuration\" : \"1000\",\n" + "  \"timeOut\" : \"5000\",\n" + "  \"extendedTimeOut\" : \"1000\",\n" + "  \"showEasing\" : \"swing\",\n" + "  \"hideEasing\" : \"linear\",\n" + "  \"showMethod\" : \"fadeIn\",\n" + "  \"hideMethod\" : \"fadeOut\",\n" + "  \"escapeHtml\" : false\n" + "};toastr['info']('Message');",
+				"toastr.options = {\n" +
+				"  \"closeButton\" : false,\n" +
+				"  \"debug\" : true,\n" +
+				"  \"newestOnTop\" : true,\n" +
+				"  \"progressBar\" : false,\n" +
+				"  \"positionClass\" : \"toast-top-right\",\n" +
+				"  \"preventDuplicates\" : false,\n" +
+				"  \"showDuration\" : \"300\",\n" +
+				"  \"hideDuration\" : \"1000\",\n" +
+				"  \"timeOut\" : \"5000\",\n" +
+				"  \"extendedTimeOut\" : \"1000\",\n" +
+				"  \"showEasing\" : \"swing\",\n" +
+				"  \"hideEasing\" : \"linear\",\n" +
+				"  \"showMethod\" : \"fadeIn\",\n" +
+				"  \"hideMethod\" : \"fadeOut\",\n" +
+				"  \"escapeHtml\" : false\n" +
+				"};toastr['info']('Message');",
 				to.renderJavascript()
 				  .toString());
 	}
@@ -67,7 +83,23 @@ public class ToastrOptionsTest
 		System.out.println(to.renderJavascript());
 
 		Assertions.assertEquals(
-				"toastr.options = {\n" + "  \"closeButton\" : false,\n" + "  \"debug\" : true,\n" + "  \"newestOnTop\" : true,\n" + "  \"progressBar\" : false,\n" + "  \"positionClass\" : \"toast-top-right\",\n" + "  \"preventDuplicates\" : false,\n" + "  \"showDuration\" : \"300\",\n" + "  \"hideDuration\" : \"1000\",\n" + "  \"timeOut\" : \"5000\",\n" + "  \"extendedTimeOut\" : \"1000\",\n" + "  \"showEasing\" : \"swing\",\n" + "  \"hideEasing\" : \"linear\",\n" + "  \"showMethod\" : \"easeOutSine\",\n" + "  \"hideMethod\" : \"fadeOut\",\n" + "  \"escapeHtml\" : false\n" + "};toastr['error']('Message','Title Test');",
+				"toastr.options = {\n" +
+				"  \"closeButton\" : false,\n" +
+				"  \"debug\" : true,\n" +
+				"  \"newestOnTop\" : true,\n" +
+				"  \"progressBar\" : false,\n" +
+				"  \"positionClass\" : \"toast-top-right\",\n" +
+				"  \"preventDuplicates\" : false,\n" +
+				"  \"showDuration\" : \"300\",\n" +
+				"  \"hideDuration\" : \"1000\",\n" +
+				"  \"timeOut\" : \"5000\",\n" +
+				"  \"extendedTimeOut\" : \"1000\",\n" +
+				"  \"showEasing\" : \"swing\",\n" +
+				"  \"hideEasing\" : \"linear\",\n" +
+				"  \"showMethod\" : \"easeOutSine\",\n" +
+				"  \"hideMethod\" : \"fadeOut\",\n" +
+				"  \"escapeHtml\" : false\n" +
+				"};toastr['error']('Message','Title Test');",
 				to.renderJavascript()
 				  .toString());
 	}
@@ -79,7 +111,23 @@ public class ToastrOptionsTest
 		System.out.println(to.renderJavascript());
 
 		Assertions.assertEquals(
-				"toastr.options = {\n" + "  \"closeButton\" : false,\n" + "  \"debug\" : false,\n" + "  \"newestOnTop\" : true,\n" + "  \"progressBar\" : false,\n" + "  \"positionClass\" : \"toast-top-right\",\n" + "  \"preventDuplicates\" : false,\n" + "  \"showDuration\" : \"300\",\n" + "  \"hideDuration\" : \"1000\",\n" + "  \"timeOut\" : \"5000\",\n" + "  \"extendedTimeOut\" : \"1000\",\n" + "  \"showEasing\" : \"swing\",\n" + "  \"hideEasing\" : \"linear\",\n" + "  \"showMethod\" : \"fadeIn\",\n" + "  \"hideMethod\" : \"fadeOut\",\n" + "  \"escapeHtml\" : false\n" + "};toastr['info']('');",
+				"toastr.options = {\n" +
+				"  \"closeButton\" : false,\n" +
+				"  \"debug\" : false,\n" +
+				"  \"newestOnTop\" : true,\n" +
+				"  \"progressBar\" : false,\n" +
+				"  \"positionClass\" : \"toast-top-right\",\n" +
+				"  \"preventDuplicates\" : false,\n" +
+				"  \"showDuration\" : \"300\",\n" +
+				"  \"hideDuration\" : \"1000\",\n" +
+				"  \"timeOut\" : \"5000\",\n" +
+				"  \"extendedTimeOut\" : \"1000\",\n" +
+				"  \"showEasing\" : \"swing\",\n" +
+				"  \"hideEasing\" : \"linear\",\n" +
+				"  \"showMethod\" : \"fadeIn\",\n" +
+				"  \"hideMethod\" : \"fadeOut\",\n" +
+				"  \"escapeHtml\" : false\n" +
+				"};toastr['info']('');",
 				to.renderJavascript()
 				  .toString());
 	}

@@ -17,35 +17,39 @@
 
 package com.jwebmp.plugins.toastr;
 
-import com.jwebmp.utilities.StaticStrings;
-
-import static com.jwebmp.utilities.StaticStrings.CHAR_DASH;
-
 /**
- * The available positions for a toast
+ * The types of toasts that are available
  *
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-public enum ToastrPosition
+public enum ToastrType
 {
-	Toast_Top_Right,
-	Toast_Top_Left,
-	Toast_Top_Full_Width,
-	Toast_Top_Center,
-	Toast_Bottom_Right,
-	Toast_Bottom_Left,
-	Toast_Bottom_Full_Width,
-	Toast_Bottom_Center,;
+	/**
+	 * A success toastr type
+	 */
+	Success,
+	/**
+	 * An info toastr type
+	 */
+	Info,
+	/**
+	 * A warning toastr type
+	 */
+	Warning,
+	/**
+	 * An error toastr type
+	 */
+	Error;
 	/**
 	 * Any sub data
 	 */
 	private String data;
 
 	/**
-	 * A new ToastrPosition
+	 * A new ToastrType
 	 */
-	ToastrPosition()
+	ToastrType()
 	{
 
 	}
@@ -64,7 +68,7 @@ public enum ToastrPosition
 		}
 		else
 		{
-			return name().toLowerCase().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH);
+			return name().toLowerCase();
 		}
 	}
 }
