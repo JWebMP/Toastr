@@ -17,11 +17,11 @@
 
 package com.jwebmp.plugins.toastr;
 
-import com.jwebmp.Feature;
+import com.jwebmp.core.Feature;
 
 import javax.validation.constraints.NotNull;
 
-import static com.jwebmp.utilities.StaticStrings.*;
+import static com.jwebmp.core.utilities.StaticStrings.*;
 
 /**
  * Creates toast messages
