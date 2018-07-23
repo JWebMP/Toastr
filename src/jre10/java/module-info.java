@@ -1,3 +1,6 @@
+import com.jwebmp.core.services.IPageConfigurator;
+import com.jwebmp.plugins.toastr.ToastrPageConfigurator;
+
 module com.jwebmp.plugins.toastr {
 
 	exports com.jwebmp.plugins.toastr;
@@ -10,4 +13,7 @@ module com.jwebmp.plugins.toastr {
 	requires java.logging;
 	requires com.fasterxml.jackson.databind;
 	requires com.jwebmp.plugins.easingeffects;
+
+	provides IPageConfigurator with ToastrPageConfigurator;
+
 }

@@ -18,9 +18,9 @@
 package com.jwebmp.plugins.toastr;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.core.services.IPageConfigurator;
 
 /**
  * @author Marc Magon
@@ -39,12 +39,10 @@ import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "http://codeseven.github.io/toastr/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/Toastr.jar/download"
-) class ToastrPageConfigurator
-		extends PageConfigurator
+)
+public class ToastrPageConfigurator
+		implements IPageConfigurator
 {
-
-	private static final long serialVersionUID = 1L;
-
 	/*
 	 * Constructs a new ToastrPageConfigurator
 	 */
