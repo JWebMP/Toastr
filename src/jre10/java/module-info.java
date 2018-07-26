@@ -15,5 +15,5 @@ module com.jwebmp.plugins.toastr {
 	requires com.jwebmp.plugins.easingeffects;
 
 	provides IPageConfigurator with ToastrPageConfigurator;
-
+	opens com.jwebmp.plugins.toastr to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
