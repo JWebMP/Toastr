@@ -11,7 +11,6 @@ module com.jwebmp.plugins.toastr {
 
 	requires java.validation;
 	requires java.logging;
-	requires com.fasterxml.jackson.databind;
 	requires com.jwebmp.plugins.easingeffects;
 
 	provides IPageConfigurator with ToastrPageConfigurator;
