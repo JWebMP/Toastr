@@ -30,7 +30,7 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * @since 09 Jun 2017
  */
 public class ToastrFeature<J extends ToastrFeature<J>>
-		extends Feature<ToastrOptions, J>
+		extends Feature<J, ToastrOptions, J>
 {
 
 	private static final long serialVersionUID = 1L;
