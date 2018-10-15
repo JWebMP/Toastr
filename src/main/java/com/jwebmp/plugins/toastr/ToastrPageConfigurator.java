@@ -35,15 +35,15 @@ import javax.validation.constraints.NotNull;
 		pluginCategories = "popups, dialogs, ui,web ui, framework",
 		pluginSubtitle = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
 		pluginSourceUrl = "https://github.com/CodeSeven/toastr",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-Toastr/wiki",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-Toastr",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-Toastr/wiki",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-Toastr",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "http://codeseven.github.io/toastr/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/Toastr.jar/download"
 )
 public class ToastrPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<ToastrPageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
