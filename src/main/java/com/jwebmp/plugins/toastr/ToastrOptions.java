@@ -17,7 +17,7 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 		extends JavaScriptPart<J>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * Show close button or not
 	 */

@@ -33,7 +33,7 @@ public class ToastrFeature<J extends ToastrFeature<J>>
 		extends Feature<J, ToastrOptions, J>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The type of the toastr
 	 */
