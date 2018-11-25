@@ -16,6 +16,7 @@ module com.jwebmp.plugins.toastr {
 	requires java.logging;
 	requires com.jwebmp.plugins.easingeffects;
 	requires com.jwebmp.guicedinjection;
+	requires com.fasterxml.jackson.databind;
 
 	provides IPageConfigurator with ToastrPageConfigurator;
 	provides IGuiceScanJarExclusions with ToastrExclusionsModule;
