@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 /**
  * All the options available for Toastr
  *
- * @author Marc Magon
+ * @author GedMarc
  * @since 09 Jun 2017
  */
 public class ToastrOptions<J extends ToastrOptions<J>>
