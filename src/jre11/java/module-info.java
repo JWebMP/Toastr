@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.toastr.ToastrPageConfigurator;
-import com.jwebmp.plugins.toastr.implementations.ToastrExclusionsModule;
-
 module com.jwebmp.plugins.toastr {
 
 	exports com.jwebmp.plugins.toastr;
@@ -18,9 +12,9 @@ module com.jwebmp.plugins.toastr {
 	requires com.jwebmp.guicedinjection;
 	requires com.fasterxml.jackson.databind;
 
-	provides IPageConfigurator with ToastrPageConfigurator;
-	provides IGuiceScanJarExclusions with ToastrExclusionsModule;
-	provides IGuiceScanModuleExclusions with ToastrExclusionsModule;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.toastr.ToastrPageConfigurator;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.toastr.implementations.ToastrExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.toastr.implementations.ToastrExclusionsModule;
 
 	opens com.jwebmp.plugins.toastr to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
