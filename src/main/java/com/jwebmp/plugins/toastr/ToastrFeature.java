@@ -61,7 +61,7 @@ public class ToastrFeature<J extends ToastrFeature<J>>
 	/*
 	 * Constructs a new ToastrFeature
 	 */
-	ToastrFeature()
+	public ToastrFeature()
 	{
 		super("ToastrFeature");
 		//Nothing needed
