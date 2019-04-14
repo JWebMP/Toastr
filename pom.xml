@@ -37,11 +37,8 @@
             <artifactId>hamcrest-all</artifactId>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>com.jwebmp.plugins.javascript</groupId>
             <artifactId>jwebmp-easing-effects</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
-            <!--<optional>true</optional>-->
         </dependency>
     </dependencies>
 
