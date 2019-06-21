@@ -212,7 +212,7 @@ public class ToastrFeature<J extends ToastrFeature<J>>
 	@NotNull
 	public J setMessage(String message)
 	{
-		this.message = message;
+		this.message = message.replaceAll("'", "\\'");
 		return (J) this;
 	}
 
