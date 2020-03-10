@@ -14,7 +14,5 @@ module com.jwebmp.plugins.toastr {
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.toastr.ToastrPageConfigurator;
 
-	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.toastr.implementations.ToastrExclusionsModule;
-
 	opens com.jwebmp.plugins.toastr to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
