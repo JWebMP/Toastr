@@ -19,7 +19,7 @@ package com.jwebmp.plugins.toastr;
 
 import com.jwebmp.core.Feature;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 import static com.guicedee.guicedinjection.json.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 import static com.guicedee.guicedinjection.json.StaticStrings.STRING_SINGLE_QUOTES;
