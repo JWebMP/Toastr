@@ -5,7 +5,7 @@ module com.jwebmp.plugins.toastr {
 	requires com.jwebmp.core;
 	requires com.guicedee.logmaster;
 
-	requires java.validation;
+	requires jakarta.validation;
 	requires java.logging;
 	requires com.jwebmp.plugins.easingeffects;
 	requires com.guicedee.guicedinjection;
