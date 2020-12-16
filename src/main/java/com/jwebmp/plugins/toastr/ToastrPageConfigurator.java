@@ -19,6 +19,7 @@ package com.jwebmp.plugins.toastr;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 import com.jwebmp.core.services.IPageConfigurator;
 
@@ -40,7 +41,11 @@ import jakarta.validation.constraints.NotNull;
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "http://codeseven.github.io/toastr/",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/Toastr.jar/download"
+		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.jquery/jwebmp-toastr",
+		pluginGroupId = "com.jwebmp.plugins.jquery",
+		pluginArtifactId = "jwebmp-toastr",
+		pluginModuleName = "com.jwebmp.plugins.toastr",
+		pluginStatus = PluginStatus.Released
 )
 public class ToastrPageConfigurator
 		implements IPageConfigurator<ToastrPageConfigurator>

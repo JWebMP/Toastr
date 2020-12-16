@@ -32,7 +32,7 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * @since 09 Jun 2017
  */
 public class ToastrFeature<J extends ToastrFeature<J>>
-		extends Feature<J, ToastrOptions, J>
+		extends Feature<J, ToastrOptions<?>, J>
 {
 
 
