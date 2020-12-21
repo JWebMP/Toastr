@@ -31,7 +31,7 @@ import jakarta.validation.constraints.NotNull;
  */
 @PluginInformation(pluginName = "Toastr",
 		pluginDescription = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
-		pluginUniqueName = "jwebswing-toastr",
+		pluginUniqueName = "toastr",
 		pluginVersion = "2.1.3",
 		pluginCategories = "popups, dialogs, ui,web ui, framework",
 		pluginSubtitle = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
