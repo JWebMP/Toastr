@@ -1,8 +1,0 @@
-{
-  "directory": "jar-resources/bower_components",
-  "ignoredDependencies": [
-    "jquery",
-    "font-awesome",
-    "angular"
-  ]
-}

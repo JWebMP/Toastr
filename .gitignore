@@ -16,3 +16,4 @@ persistence.xml
 **/*.iml
 *.iml
 /.idea/
+/flatter.pom

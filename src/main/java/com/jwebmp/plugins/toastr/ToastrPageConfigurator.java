@@ -17,12 +17,12 @@
 
 package com.jwebmp.plugins.toastr;
 
-import com.jwebmp.core.Page;
+import com.jwebmp.core.base.angular.client.annotations.angularconfig.NgScript;
+import com.jwebmp.core.base.angular.client.annotations.angularconfig.NgStyleSheet;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.PluginStatus;
-import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.core.services.IPage;
 import com.jwebmp.core.services.IPageConfigurator;
-
 import jakarta.validation.constraints.NotNull;
 
 /**
@@ -30,83 +30,84 @@ import jakarta.validation.constraints.NotNull;
  * @since 08 Jun 2017
  */
 @PluginInformation(pluginName = "Toastr",
-		pluginDescription = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
-		pluginUniqueName = "toastr",
-		pluginVersion = "2.1.3",
-		pluginCategories = "popups, dialogs, ui,web ui, framework",
-		pluginSubtitle = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
-		pluginSourceUrl = "https://github.com/CodeSeven/toastr",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-Toastr/wiki",
-		pluginGitUrl = "https://github.com/GedMarc/JWebMP-Toastr",
-		pluginIconUrl = "",
-		pluginIconImageUrl = "",
-		pluginOriginalHomepage = "http://codeseven.github.io/toastr/",
-		pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.jquery/jwebmp-toastr",
-		pluginGroupId = "com.jwebmp.plugins.jquery",
-		pluginArtifactId = "jwebmp-toastr",
-		pluginModuleName = "com.jwebmp.plugins.toastr",
-		pluginStatus = PluginStatus.Released
+        pluginDescription = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
+        pluginUniqueName = "toastr",
+        pluginVersion = "2.1.3",
+        pluginCategories = "popups, dialogs, ui,web ui, framework",
+        pluginSubtitle = "toastr is a Javascript library for non-blocking notifications. jQuery is required. The goal is to create a simple core library that can be customized and extended.",
+        pluginSourceUrl = "https://github.com/CodeSeven/toastr",
+        pluginWikiUrl = "https://github.com/GedMarc/JWebMP-Toastr/wiki",
+        pluginGitUrl = "https://github.com/GedMarc/JWebMP-Toastr",
+        pluginIconUrl = "",
+        pluginIconImageUrl = "",
+        pluginOriginalHomepage = "http://codeseven.github.io/toastr/",
+        pluginDownloadUrl = "https://mvnrepository.com/artifact/com.jwebmp.plugins.jquery/jwebmp-toastr",
+        pluginGroupId = "com.jwebmp.plugins.jquery",
+        pluginArtifactId = "jwebmp-toastr",
+        pluginModuleName = "com.jwebmp.plugins.toastr",
+        pluginStatus = PluginStatus.Released
 )
+@NgScript(name = "Toastr", value = "bower_components/toastr/toastr.js")
+@NgStyleSheet(name = "Toastr", value = "bower_components/toastr/toastr.scss")
 public class ToastrPageConfigurator
-		implements IPageConfigurator<ToastrPageConfigurator>
+        implements IPageConfigurator<ToastrPageConfigurator>
 {
-	/**
-	 * If this configurator is enabled
-	 */
-	private static boolean enabled = true;
+    /**
+     * If this configurator is enabled
+     */
+    private static boolean enabled = true;
 
-	/*
-	 * Constructs a new ToastrPageConfigurator
-	 */
-	public ToastrPageConfigurator()
-	{
-		//Nothing needed
-	}
+    /*
+     * Constructs a new ToastrPageConfigurator
+     */
+    public ToastrPageConfigurator()
+    {
+        //Nothing needed
+    }
 
-	/**
-	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
-	 * <p>
-	 * If this configurator is enabled
-	 *
-	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
-	 */
-	public static boolean isEnabled()
-	{
-		return ToastrPageConfigurator.enabled;
-	}
+    /**
+     * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+     * <p>
+     * If this configurator is enabled
+     *
+     * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+     */
+    public static boolean isEnabled()
+    {
+        return ToastrPageConfigurator.enabled;
+    }
 
-	/**
-	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
-	 * <p>
-	 * If this configurator is enabled
-	 *
-	 * @param mustEnable
-	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
-	 */
-	public static void setEnabled(boolean mustEnable)
-	{
-		ToastrPageConfigurator.enabled = mustEnable;
-	}
+    /**
+     * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+     * <p>
+     * If this configurator is enabled
+     *
+     * @param mustEnable the enabled of this AngularAnimatedChangePageConfigurator object.
+     */
+    public static void setEnabled(boolean mustEnable)
+    {
+        ToastrPageConfigurator.enabled = mustEnable;
+    }
 
-	@NotNull
-	@Override
-	 public Page<?> configure(Page<?> page)
-	{
-		if (!page.isConfigured() && enabled())
-		{
-			JQueryPageConfigurator.setRequired(true);
+    @NotNull
+    @Override
+    public IPage<?> configure(IPage<?> page)
+    {
+        /*if (enabled())
+        {
+            page.getBody()
+                .asDependencyBase()
+                .addJavaScriptReference(ToastrReferencePool.Toastr.getJavaScriptReference());
+            page.getBody()
+                .asDependencyBase()
+                .addCssReference(ToastrReferencePool.Toastr.getCssReference());
+        }*/
+        return page;
+    }
 
-			page.getBody()
-			    .addJavaScriptReference(ToastrReferencePool.Toastr.getJavaScriptReference());
-			page.getBody()
-			    .addCssReference(ToastrReferencePool.Toastr.getCssReference());
-		}
-		return page;
-	}
-
-	@Override
-	public boolean enabled()
-	{
-		return ToastrPageConfigurator.enabled;
-	}
+    @Override
+    public boolean enabled()
+    {
+        return ToastrPageConfigurator.enabled;
+    }
 }
