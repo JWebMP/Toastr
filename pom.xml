@@ -6,73 +6,49 @@
         <artifactId>parent</artifactId>
         <version>2.0.0-SNAPSHOT</version>
     </parent>
-
-
     <groupId>com.jwebmp.plugins</groupId>
     <artifactId>toastr</artifactId>
     <packaging>jar</packaging>
     <version>2.0.0-SNAPSHOT</version>
     <name>Toastr</name>
-
-    <description>The JWebSwing implementation for Toastr</description>
-
+    <description>The JWebMP implementation for Toastr</description>
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/JWebMP/Toastr/issues</url>
+    </issueManagement>
     <dependencies>
+        <dependency>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>jwebmp-core</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.jwebmp.plugins</groupId>
             <artifactId>easing-effects</artifactId>
         </dependency>
         <dependency>
             <groupId>com.jwebmp.plugins</groupId>
-            <artifactId>jquery</artifactId>
+            <artifactId>typescript-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.jwebmp.core</groupId>
-            <artifactId>jwebmp-testlib</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <properties>
         <ignore.moditect>true</ignore.moditect>
         <project.scm.nameUrl>/JWebMP/Plugins/Toastr</project.scm.nameUrl>
     </properties>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.guicedee</groupId>
-                <artifactId>standalone-bom</artifactId>
-                <type>pom</type>
-                <scope>import</scope>
-                <version>${guicedee.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee</groupId>
-                <artifactId>fasterxml-bom</artifactId>
-                <type>pom</type>
-                <scope>import</scope>
-                <version>${guicedee.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.jwebmp</groupId>
-                <artifactId>jwebmp-bom</artifactId>
-                <type>pom</type>
-                <scope>import</scope>
-                <version>${guicedee.version}</version>
-            </dependency>
-
-        </dependencies>
-    </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
-
 </project>

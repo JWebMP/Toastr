@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 import com.jwebmp.plugins.easingeffects.JQEasingEffects;
 
-import jakarta.validation.constraints.NotNull;
 
 /**
  * All the options available for Toastr
@@ -102,7 +101,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	}
 
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setCloseButton(Boolean closeButton)
 	{
 		this.closeButton = closeButton;
@@ -127,7 +125,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setDebug(Boolean debug)
 	{
 		this.debug = debug;
@@ -152,7 +149,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setNewestOnTop(Boolean newestOnTop)
 	{
 		this.newestOnTop = newestOnTop;
@@ -177,7 +173,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setProgressBar(Boolean progressBar)
 	{
 		this.progressBar = progressBar;
@@ -202,7 +197,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setPositionClass(ToastrPosition positionClass)
 	{
 		this.positionClass = positionClass;
@@ -227,7 +221,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setPreventDuplicates(Boolean preventDuplicates)
 	{
 		this.preventDuplicates = preventDuplicates;
@@ -252,7 +245,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setShowDuration(Integer showDuration)
 	{
 		this.showDuration = showDuration;
@@ -277,7 +269,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setHideDuration(Integer hideDuration)
 	{
 		this.hideDuration = hideDuration;
@@ -302,7 +293,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setTimeOut(Integer timeOut)
 	{
 		this.timeOut = timeOut;
@@ -327,7 +317,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setExtendedTimeOut(Integer extendedTimeOut)
 	{
 		this.extendedTimeOut = extendedTimeOut;
@@ -352,7 +341,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setShowEasing(JQEasingEffects showEasing)
 	{
 		this.showEasing = showEasing;
@@ -377,7 +365,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setHideEasing(JQEasingEffects hideEasing)
 	{
 		this.hideEasing = hideEasing;
@@ -402,7 +389,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setShowMethod(JQEasingEffects showMethod)
 	{
 		this.showMethod = showMethod;
@@ -427,7 +413,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setHideMethod(JQEasingEffects hideMethod)
 	{
 		this.hideMethod = hideMethod;
@@ -452,7 +437,6 @@ public class ToastrOptions<J extends ToastrOptions<J>>
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	@NotNull
 	public J setEscapeHtml(Boolean escapeHtml)
 	{
 		this.escapeHtml = escapeHtml;
