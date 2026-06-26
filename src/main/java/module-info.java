@@ -12,12 +12,12 @@ module com.jwebmp.plugins.toastr {
     requires com.jwebmp.plugins.easingeffects;
 
     requires com.guicedee.client;
-    requires com.fasterxml.jackson.databind;
+    requires tools.jackson.databind;
     requires com.guicedee.jsonrepresentation;
 
     provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.toastr.ToastrPageConfigurator;
     provides IGuiceScanModuleInclusions with ToastrInclusionsModule;
 
-    opens com.jwebmp.plugins.toastr to com.fasterxml.jackson.databind, com.jwebmp.core, com.google.guice;
+    opens com.jwebmp.plugins.toastr to tools.jackson.databind, com.jwebmp.core, com.google.guice;
     opens com.jwebmp.plugins.toastr.implementations to com.google.guice;
 }
