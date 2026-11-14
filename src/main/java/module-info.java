@@ -1,6 +1,3 @@
-import com.guicedee.client.services.config.IGuiceScanModuleInclusions;
-import com.jwebmp.plugins.toastr.implementations.ToastrInclusionsModule;
-
 module com.jwebmp.plugins.toastr {
 
     exports com.jwebmp.plugins.toastr;
@@ -16,8 +13,11 @@ module com.jwebmp.plugins.toastr {
     requires com.guicedee.jsonrepresentation;
 
     provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.toastr.ToastrPageConfigurator;
-    provides IGuiceScanModuleInclusions with ToastrInclusionsModule;
 
     opens com.jwebmp.plugins.toastr to tools.jackson.databind, com.jwebmp.core, com.google.guice;
     opens com.jwebmp.plugins.toastr.implementations to com.google.guice;
+
+    provides com.guicedee.client.services.config.IGuiceScanModuleExclusions with com.jwebmp.plugins.toastr.implementations.ToastrExclusionsModule;
+
+    provides com.guicedee.client.services.config.IGuiceScanJarExclusions with com.jwebmp.plugins.toastr.implementations.ToastrExclusionsModule;
 }
